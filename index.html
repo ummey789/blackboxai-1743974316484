@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreeLogoGen</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;700&family=Oswald:wght@400;700&family=Dancing+Script:wght@700&family=Great+Vibes&family=Parisienne&family=Sacramento&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.tailwindcss.com">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gradient-to-r from-red-400 to-yellow-300">
+    <header class="p-5">
+        <h1 class="text-4xl font-bold text-center text-white">FreeLogoGen</h1>
+        <nav class="text-center mt-3">
+            <a href="index.html" class="text-white hover:underline">Home</a> | 
+            <a href="gallery.html" class="text-white hover:underline">Gallery</a>
+        </nav>
+    </header>
+    <main class="container mx-auto mt-10">
+        <section class="text-center">
+            <h2 class="text-3xl font-semibold">Create Your Free Logo in Minutes</h2>
+            <p class="mt-2 text-lg">Customize colors, fonts, and shapes to get your perfect logo</p>
+        </section>
+        <section class="mt-10">
+            <form id="logo-form" class="bg-white p-5 rounded shadow-md">
+                <input type="text" id="logo-text" placeholder="Enter logo text" required class="border p-2 rounded w-full mb-4">
+                <select id="font-selector" class="border p-2 rounded w-full mb-4">
+                    <option value="Roboto">Roboto</option>
+                    <option value="Poppins">Poppins</option>
+                    <option value="Oswald">Oswald</option>
+                    <option value="Dancing Script">Dancing Script</option>
+                    <option value="Great Vibes">Great Vibes</option>
+                    <option value="Parisienne">Parisienne</option>
+                    <option value="Sacramento">Sacramento</option>
+                </select>
+                <input type="color" id="primary-color" class="border p-2 rounded w-full mb-4" value="#000000">
+                <input type="color" id="secondary-color" class="border p-2 rounded w-full mb-4" value="#FFFFFF">
+                <button type="button" id="generate-logo" class="bg-blue-500 text-white p-2 rounded">Generate Logo</button>
+                <button type="reset" class="bg-gray-500 text-white p-2 rounded">Reset</button>
+            </form>
+        </section>
+        <section class="mt-10">
+            <canvas id="logo-canvas" width="400" height="200" class="border"></canvas>
+            <button id="download-btn" class="bg-green-500 text-white p-2 rounded mt-4">Download PNG</button>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
